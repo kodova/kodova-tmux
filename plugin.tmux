@@ -70,10 +70,9 @@ function main
     wset window-status-current-format "#[fg=black,bg=brightcyan] #I #[fg=white,bg=black] #W "
     wset window-status-format "#[fg=black,bg=white] #I #[fg=white,bg=black] #W "
 
-    set dir_status "#[fg=$thm_dir_bg,bg=$color_bg] #[fg=$thm_dir_fg,bg=$thm_dir_bg] #{pane_current_path} "
-    set time_status "#[fg=$thm_time_bg,bg=$thm_dir_bg] #[fg=$thm_time_fg,bg=$thm_time_bg] #(TZ=UTC date +%%H:%%M\ %%m/%%d) "
-    set session_status "#[fg=$thm_sess_bg,bg=$thm_time_bg] #[fg=$thm_sess_fg,bg=$thm_sess_bg] #S "
-    
+    set dir_status "#[fg=$thm_dir_bg,bg=$color_bg]#[fg=$thm_dir_fg,bg=$thm_dir_bg] #{pane_current_path} "
+    set time_status "#[fg=$thm_time_bg,bg=$thm_dir_bg]#[fg=$thm_time_fg,bg=$thm_time_bg] #(TZ=UTC date +%%H:%%M\ %%m/%%d) "
+    set session_status "#[fg=$thm_sess_bg,bg=$thm_time_bg]#[fg=$thm_sess_fg,bg=$thm_sess_bg] #S "
 
     # reset
     tmux set-option -g status-right ""
